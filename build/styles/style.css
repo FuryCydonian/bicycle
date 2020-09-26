@@ -236,7 +236,7 @@ li {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #29ac6f;
+    background-color: #64c29e;
     transition: 0.3s ease-in-out 0s;
   }
   .icon-menu span:first-child {

@@ -1,0 +1,35 @@
+.generation {
+    &__block {
+
+    }
+}
+
+.container {
+
+}
+
+.block {
+    text-align: center;
+    &__icon {
+        margin-bottom: 33px;
+    }
+
+    &__title {
+        font-family: "Lato";
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #353738;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 34px;
+        font-weight: 400;
+        color: #848789;
+    }
+
+}
