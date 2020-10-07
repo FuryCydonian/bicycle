@@ -11,7 +11,6 @@
         &--b {
             flex: 0 1 66.667%;
         }
-
     }
 
     &__item {
@@ -21,17 +20,18 @@
     &__content {
         padding: 70px 65px 55px 65px;
         position: relative;
+        //треугольник //
         &::after {
             content: '';
             position: absolute;
             bottom: -10px;
             left: 50%;
-            // margin-left: -8%;
+            margin-left: -10px;
             width: 0;
             height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-top: 100px solid red;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid white;
         }
     }
 
@@ -41,6 +41,18 @@
         background: url(/build/img/brands/brands__image_1.jpg) center / cover no-repeat;
     }
 
+    @media(max-width: 1500px) {
+        &__content {
+            padding: 40px 35px 30px 35px;
+        }
+    }
+
+    @media (max-width: 1100px) {
+        &__row {
+            flex-direction: column;
+        }
+    }
+
 }
 
 .item {
@@ -48,7 +60,19 @@
     position: relative;
     height: 100%;
     &__logo {
-
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        transition: 0.3s ease-in-out 0s;
+        background-color: rgba(100, 194, 158, 0.5);
+        opacity: 0;
+        visibility: hidden;
     }
 
     &__image {
@@ -59,6 +83,18 @@
         left: 0;
         flex: 1 0 100%;
         background: url(/build/img/brands/item__image_1.jpg) center / cover no-repeat;
+    }
+
+    &:hover {
+        .item__logo {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    @media (max-width: 1100px) {
+        height: auto;
+        padding: 0 0 70% 0;
     }
 }
 
@@ -94,5 +130,11 @@
         color: #353738;
         margin-bottom: 26px;
         mask-position: 31px;
+    }
+
+    @media (max-width: 1500px) {
+        &__text--j::after {
+            margin: 15px auto 0 auto;
+        }
     }
 }
